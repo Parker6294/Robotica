@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completar PDF con plantilla</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+
+</head>
+<body>
+    <h1>Completar datos en un PDF con diseño</h1>
+    <form id="pdf-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required><br><br>
+
+        <button type="button" id="generate-pdf">Generar PDF</button>
+    </form>
+
+    <script>
+        async function rellenarPDF() {
+            // Cargar el archivo PDF de la plantilla
+            const existingPdfBytes = await fetch('ruta-de-tu-plantilla.pdf').then(res => res.arrayBuffer());
+    
+            // Cargar el PDF con PDF-Lib
+            const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
+    
+            // Acceder a la primera página
+            const page = pdfDoc.getPages()[0];
+    
+            // Añadir texto en coordenadas específicas
+            page.drawText('Nombre: Juan Pérez', {
+                x: 50,
+                y: 700,
+                size: 12,
+                color: PDFLib.rgb(0, 0, 0),
+            });
+    
+            page.drawText('Edad: 25', {
+                x: 50,
+                y: 680,
+                size: 12,
+                color: PDFLib.rgb(0, 0, 0),
+            });
+    
+            // Exportar el PDF modificado
+            const pdfBytes = await pdfDoc.save();
+            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'formulario-completado.pdf';
+            link.click();
+        }
+    
+        rellenarPDF();
+    </script>
+
+
+</body>
+</html>
