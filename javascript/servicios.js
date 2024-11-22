@@ -48,10 +48,10 @@ function showService(service) {
           </ul>
         </div>`;
       imageSources = [
-        "../Imagenes/servicios/vic1.jpg",
-        "../Imagenes/servicios/vic2.jpg",
-        "../Imagenes/servicios/vic3.jpg",
-        "../Imagenes/servicios/vic4.jpg"
+        "https://github.com/Parker6294/Robotica/blob/main/imagenes/Servicios/vic1.jpg?raw=true",
+        "https://github.com/Parker6294/Robotica/blob/main/imagenes/Servicios/vic2.jpg?raw=true",
+        "https://github.com/Parker6294/Robotica/blob/main/imagenes/Servicios/vic3.jpg?raw=true",
+        "https://github.com/Parker6294/Robotica/blob/main/imagenes/Servicios/vic4.jpg?raw=true"
       ];
       carouselId = "consultoria-carousel";
       break;
@@ -73,10 +73,10 @@ function showService(service) {
           </ul>
         </div>`;
       imageSources = [
-        "Imagenes/servicios/man1.jpg",
-        "Imagenes/servicios/man2.jpg",
-        "Imagenes/servicios/man3.jpg",
-        "Imagenes/servicios/man4.jpg"
+        "https://github.com/Parker6294/Robotica/blob/main/imagenes/Servicios/man1.jpg?raw=true",
+        "https://github.com/Parker6294/Robotica/blob/main/imagenes/Servicios/man2.jpg?raw=true",
+        "https://github.com/Parker6294/Robotica/blob/main/imagenes/Servicios/man3.jpg?raw=true",
+        "https://github.com/Parker6294/Robotica/blob/main/imagenes/Servicios/man4.jpg?raw=true"
       ];
       carouselId = "mantenimiento-carousel";
       break;
@@ -95,9 +95,9 @@ function showService(service) {
           </ul>
         </div>`;
       imageSources = [
-        "Imagenes/servicios/mon1.jpg",
-        "Imagenes/servicios/mon2.jpg",
-        "Imagenes/servicios/mon3.jpg",
+        "https://github.com/Parker6294/Robotica/blob/main/imagenes/Servicios/mon1.jpg?raw=true",
+        "https://github.com/Parker6294/Robotica/blob/main/imagenes/Servicios/mon2.jpg?raw=true",
+        "https://github.com/Parker6294/Robotica/blob/main/imagenes/Servicios/mon3.jpg?raw=true",
         "https://integracionav.com/wp-content/uploads/2020/03/91.-centro-de-monitoreo.jpeg"
       ];
       carouselId = "monitoreo-carousel";
